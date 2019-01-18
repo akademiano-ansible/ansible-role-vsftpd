@@ -13,3 +13,5 @@ vsftpd_owner: root
 vsftpd_setype: public_content_t
 vsftpd_syslog_enable: true
 vsftpd_write_enable: true
+vsftpd_userlist_whitelist: true
+vsftpd_chroot_local_user: false
