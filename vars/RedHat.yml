@@ -8,3 +8,5 @@ vsftpd_packages:
 vsftpd_service: vsftpd
 
 vsftpd_config_file: /etc/vsftpd/vsftpd.conf
+
+vsftpd_userlist_file: /etc/vsftpd/user_list
