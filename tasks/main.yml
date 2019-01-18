@@ -53,6 +53,15 @@
     #  validation always exits with status 1, even if everything seems ok
   notify: restart vsftpd
   tags: vsftpd
+  
+- name: Install userlist file
+  template:
+    src:   "{{vsftpd_userlist}}"
+    dest: "{{ vsftpd_userlist_file }}"
+    mode: '0600'
+  when: vsftpd_userlist is defined
+  notify: restart vsftpd
+  tags: vsftpd
 
 - name: Add extra (ACL) permissions
   acl:
