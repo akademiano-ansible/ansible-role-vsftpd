@@ -56,10 +56,10 @@
   
 - name: Install userlist file
   template:
-    src:   "{{vsftpd_userlist}}"
+    src:   etc_vsftpd_user_list.j2
     dest: "{{ vsftpd_userlist_file }}"
     mode: '0600'
-  when: vsftpd_userlist is defined
+  when: vsftpd_userlist
   notify: restart vsftpd
   tags: vsftpd
 

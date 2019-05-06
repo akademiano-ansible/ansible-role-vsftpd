@@ -1,8 +1,5 @@
 # Vsftpd userlist
 # Managed by Ansible, don't edit manually
-# 
-# Add every user you want to whitelist on a new line
-svena
-keanu
-stevenh
-leend
+{% for user in vsftpd_userlist_users %}
+{{ user }}
+{% endfor %}
